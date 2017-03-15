@@ -37,6 +37,10 @@ class Intro extends Component {
     // }, 500);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('keypress', this.handleKeyPress);
+  }
+
   render() {
     return(
       <section id="game-intro">

@@ -11,15 +11,16 @@ export default class Game extends Component {
 
     this.state = {
       gameState: 0,
-      slideIndex: 0,
+      sceneIndex: 0,
     };
   }
 
   handleStart = () => {
+    const { gameState } = this.state;
     this.setState({
-      gameState: 1,
+      gameState: gameState + 1,
     });
-    console.log('Game::handleStart:', this.state.gameState);
+    console.log('Game::handleStart:', gameState);
   }
 
   handleDone = () => {
@@ -28,17 +29,16 @@ export default class Game extends Component {
     });
   }
 
-  handleLeave = (index) => {
+  onChangeScene = (index) => {
     this.setState({
-      gameState: 2,
-      slideIndex: index,
+      sceneIndex: index,
     });
   }
 
   render() {
     this.gameStates = [
       <Intro onStart={this.handleStart} />,
-      <Scenes onLeave={this.handleLeave} />,
+      <Scenes onChangeScene={this.onChangeScene} sceneIndex={this.state.sceneIndex} />,
       // <Slides onDone={this.handleDone} index={this.state.slideIndex} />
     ];
 

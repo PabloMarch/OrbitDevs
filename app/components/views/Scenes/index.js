@@ -6,13 +6,31 @@ export default class Scenes extends Component {
     onLeave: PropTypes.func,
   };
 
+  constructor(props) {
+    super(props);
+  }
+
+  handleKeyPress = (e) => {
+    if (e.keyCode === 32) {
+      this.props.onChangeScene(this.props.sceneIndex+1);
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('keypress', this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keypress', this.handleKeyPress);
+  }
+
   render() {
     return(
       <section id="game-scenes">
         <header className="intro-head">
           <div className="intro-head-content">
-            <h1>Start Game::  <span>Level 1</span></h1>
-            <p>Score: 0</p>
+            <h1>Start Game::  <span>Level {this.props.sceneIndex}</span></h1>
+            <p>Score: <span>{this.props.sceneIndex * 5}</span></p>
           </div>
         </header>
       </section>
