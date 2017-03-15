@@ -20,7 +20,7 @@ export default class Game extends Component {
     this.setState({
       sceneIndex: this.state.sceneIndex + skip,
     });
-    console.log('Game::handleStart: ', this.state.sceneIndex);
+    console.log('Game::onChangeScene: ', this.state.sceneIndex);
   }
 
   onChangeLevel = (skip = 0) => {
@@ -32,7 +32,7 @@ export default class Game extends Component {
 
   onGameDone = (skip = 0) => {
     this.onChangeScene(skip);
-    console.log('Game::onGameDone: ', this.state.sceneIndex);
+    console.log('Game::onGameDone: ', this.state.levelIndex, this.state.sceneIndex);
   }
 
   onResetGame = () => {

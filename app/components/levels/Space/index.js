@@ -11,7 +11,7 @@ export default class Scenes extends Component {
     super(props);
   }
 
-  handleKeyPress = (e) => {
+  onKeyPress = (e) => {
     const { levelIndex, maxScore, onChangeLevel, onGameDone } = this.props;
 
     if (e.keyCode === 32) {
@@ -24,11 +24,11 @@ export default class Scenes extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('keypress', this.handleKeyPress);
+    window.addEventListener('keypress', this.onKeyPress);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keypress', this.handleKeyPress);
+    window.removeEventListener('keypress', this.onKeyPress);
   }
 
   render() {
@@ -37,7 +37,7 @@ export default class Scenes extends Component {
         <header className="intro-head">
           <div className="intro-head-content">
             <h1>Scenes ::  <span>Level {this.props.levelIndex}</span></h1>
-            <p>Score :: <span>{this.props.levelIndex * 5}</span></p>
+            <p>Score :: <span>{this.props.levelIndex * 20}</span></p>
           </div>
         </header>
       </section>

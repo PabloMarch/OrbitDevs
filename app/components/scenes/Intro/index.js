@@ -14,10 +14,10 @@ class Intro extends Component {
     super(props);
   }
 
-  handleKeyPress = (e) => {
+  onKeyPress = (e) => {
     if (e.keyCode === 32) {
       // this.startNoise.play();
-      // console.log('Intro::handleKeyPress:', e.keyCode);
+      // console.log('Intro::onKeyPress:', e.keyCode);
       this.props.onChangeScene(1);
     }
   }
@@ -28,7 +28,7 @@ class Intro extends Component {
 
   componentDidMount() {
     // this.startNoise = new AudioPlayer('/assets/start.wav');
-    window.addEventListener('keypress', this.handleKeyPress);
+    window.addEventListener('keypress', this.onKeyPress);
     // this.animationFrame = requestAnimationFrame(this.startUpdate);
     // this.interval = setInterval(() => {
     //   this.setState({
@@ -38,7 +38,7 @@ class Intro extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keypress', this.handleKeyPress);
+    window.removeEventListener('keypress', this.onKeyPress);
   }
 
   render() {

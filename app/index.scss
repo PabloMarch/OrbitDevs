@@ -16,10 +16,11 @@ section {
   height: 100%;
   display: block;
   overflow: hidden;
+  color: rgba(255, 255, 255, .4);
 
   strong, h1, p {
     span {
-      color: white;
+      color: #FFF;
     }
   }
 }
@@ -45,17 +46,14 @@ header {
 
 #game-scene--intro {
   background-color: #192856;
-  color: #3f5084;
 }
 
 #game-level--space {
   background-color: #561942;
-  color: #b95f9c;
 }
 
 #game-scene--score {
   background-color: #233810;
-  color: #83af5b;
 
   a {
     text-decoration: none;
