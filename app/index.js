@@ -6,7 +6,7 @@ import { Loop, Stage, World, Body } from 'react-game-kit';
 // config
 import configureStore from './store/configureStore';
 // components
-import Game from 'Game';
+import Game from './components/Game';
 
 const store = configureStore();
 

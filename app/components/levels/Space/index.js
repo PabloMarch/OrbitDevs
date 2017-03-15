@@ -3,7 +3,8 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Scenes extends Component {
   static propTypes = {
-    onLeave: PropTypes.func,
+    onChangeLevel: PropTypes.func,
+    onGameDone: PropTypes.func,
   };
 
   constructor(props) {
@@ -11,8 +12,14 @@ export default class Scenes extends Component {
   }
 
   handleKeyPress = (e) => {
+    const { levelIndex, maxScore, onChangeLevel, onGameDone } = this.props;
+
     if (e.keyCode === 32) {
-      this.props.onChangeScene(this.props.sceneIndex+1);
+      if(levelIndex < maxScore) {
+        onChangeLevel(1);
+        return;
+      }
+      onGameDone(1);
     }
   }
 
@@ -26,11 +33,11 @@ export default class Scenes extends Component {
 
   render() {
     return(
-      <section id="game-scenes">
+      <section id="game-level--space">
         <header className="intro-head">
           <div className="intro-head-content">
-            <h1>Start Game::  <span>Level {this.props.sceneIndex}</span></h1>
-            <p>Score: <span>{this.props.sceneIndex * 5}</span></p>
+            <h1>Scenes ::  <span>Level {this.props.levelIndex}</span></h1>
+            <p>Score :: <span>{this.props.levelIndex * 5}</span></p>
           </div>
         </header>
       </section>

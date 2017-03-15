@@ -16,6 +16,12 @@ section {
   height: 100%;
   display: block;
   overflow: hidden;
+
+  strong, h1, p {
+    span {
+      color: white;
+    }
+  }
 }
 
 header {
@@ -35,25 +41,28 @@ header {
   h1 {
     font-size: 1.2em;
   }
-
-  strong,
-  h1 span {
-    color: white;
-  }
 }
 
-#game-intro {
+#game-scene--intro {
   background-color: #192856;
-
-  header div {
-    color: #3f5084;
-  }
+  color: #3f5084;
 }
 
-#game-scenes {
+#game-level--space {
   background-color: #561942;
+  color: #b95f9c;
+}
 
-  header div {
-    color: #802863;
+#game-scene--score {
+  background-color: #233810;
+  color: #83af5b;
+
+  a {
+    text-decoration: none;
+    color: #f5f243;
+
+    &:hover {
+      color: #f57f43;
+    }
   }
 }

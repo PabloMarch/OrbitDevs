@@ -7,7 +7,7 @@ import {
 
 class Intro extends Component {
   static propTypes = {
-    onStart: PropTypes.func,
+    onChangeScene: PropTypes.func,
   };
 
   constructor(props) {
@@ -18,7 +18,7 @@ class Intro extends Component {
     if (e.keyCode === 32) {
       // this.startNoise.play();
       // console.log('Intro::handleKeyPress:', e.keyCode);
-      this.props.onStart();
+      this.props.onChangeScene(1);
     }
   }
 
@@ -43,11 +43,11 @@ class Intro extends Component {
 
   render() {
     return(
-      <section id="game-intro">
+      <section id="game-scene--intro">
         <header className="intro-head">
           <div className="intro-head-content">
             <h1><span>OrbitDevs</span> :: <span>Intro</span> :: <span>{this.props.intro.text}</span></h1>
-            <p>press <strong>space</strong> to continue</p>
+            <p>press <span>space</span> to continue</p>
           </div>
         </header>
       </section>

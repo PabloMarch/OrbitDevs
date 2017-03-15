@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Intro from './views/Intro';
-import Scenes from './views/Scenes';
-// import Slides from './slides';
+import Intro from './scenes/Intro';
+import Score from './scenes/Score';
+import Space from './levels/Space';
 
 export default class Game extends Component {
 
@@ -10,38 +10,53 @@ export default class Game extends Component {
     super(props);
 
     this.state = {
-      gameState: 0,
+      maxScore: 5,
       sceneIndex: 0,
+      levelIndex: 0,
     };
   }
 
-  handleStart = () => {
-    const { gameState } = this.state;
+  onChangeScene = (skip = 0) => {
     this.setState({
-      gameState: gameState + 1,
+      sceneIndex: this.state.sceneIndex + skip,
     });
-    console.log('Game::handleStart:', gameState);
+    console.log('Game::handleStart: ', this.state.sceneIndex);
   }
 
-  handleDone = () => {
+  onChangeLevel = (skip = 0) => {
     this.setState({
-      gameState: 1,
+      levelIndex: this.state.levelIndex + skip,
     });
+    console.log('Game::onChangeLevel: ', this.state.levelIndex);
   }
 
-  onChangeScene = (index) => {
+  onGameDone = (skip = 0) => {
+    this.onChangeScene(skip);
+    console.log('Game::onGameDone: ', this.state.sceneIndex);
+  }
+
+  onResetGame = () => {
     this.setState({
-      sceneIndex: index,
+      sceneIndex: 0,
+      levelIndex: 0
     });
+    console.log('Game::onResetGame: ', this.state.sceneIndex);
   }
 
   render() {
+    const { levelIndex, sceneIndex, maxScore } = this.state;
+
     this.gameStates = [
-      <Intro onStart={this.handleStart} />,
-      <Scenes onChangeScene={this.onChangeScene} sceneIndex={this.state.sceneIndex} />,
-      // <Slides onDone={this.handleDone} index={this.state.slideIndex} />
+      <Intro onChangeScene={this.onChangeScene} />,
+      <Space
+        maxScore={maxScore}
+        levelIndex={levelIndex}
+        onChangeLevel={this.onChangeLevel}
+        onGameDone={this.onGameDone}
+      />,
+      <Score onResetGame={this.onResetGame} />
     ];
 
-    return this.gameStates[this.state.gameState];
+    return this.gameStates[sceneIndex];
   }
 }
