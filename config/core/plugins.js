@@ -13,6 +13,6 @@ export default [
   new webpack.optimize.CommonsChunkPlugin({
     name: 'vendor',
     minChunks: Infinity,
-    filename: 'vendor.js',
+    filename: 'vendor.bundle.js',
   })
 ];

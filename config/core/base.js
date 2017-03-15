@@ -8,7 +8,7 @@ export default {
   },
   output: {
     path: PATHS.build,
-    filename: 'app.js'
+    filename: 'app.bundle.js'
   },
   resolve: {
     modules: PATHS.resolvePaths
