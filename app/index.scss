@@ -1,0 +1,59 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:  0;
+  display: block;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+header {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    max-width: 50%;
+    text-align: center;
+    font-weight: lighter;
+    font-family: "Andale Mono",AndaleMono,monospace;
+    font-size: 2em;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  strong,
+  h1 span {
+    color: white;
+  }
+}
+
+#game-intro {
+  background-color: #192856;
+
+  header div {
+    color: #3f5084;
+  }
+}
+
+#game-scenes {
+  background-color: #561942;
+
+  header div {
+    color: #802863;
+  }
+}

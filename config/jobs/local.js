@@ -7,17 +7,24 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
-          {
-            loader: 'style-loader'
-          },
+          { loader: 'style-loader' },
           {
             loader: 'css-loader',
             options: {
-              modules: true
+              // modules: true,
+              importLoaders: 1,
+              sourceMap: true,
+              // localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+              includePaths: [ './app', './app/components' ]
             }
-          }],
+          },
+          {
+            loader: 'sass-loader',
+            options: { sourceMap: true }
+          }
+        ],
         include: PATHS.app
       }
     ]

@@ -7,12 +7,16 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
+        exclude: /node_modules/,
         include: PATHS.app,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader'
-        })
+          use: [
+            { loader: 'css-loader' },
+            { loader: 'sass-loader' }
+          ]
+        }),
       }
     ]
   },
@@ -41,6 +45,6 @@ export default {
         comments: false,
       }
     }),
-    new ExtractTextPlugin('app.css')
+    new ExtractTextPlugin('app.bundle.css')
   ]
 };

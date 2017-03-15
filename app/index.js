@@ -1,16 +1,18 @@
-import './index.css';
+import './index.scss';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
+import { Loop, Stage, World, Body } from 'react-game-kit';
+// config
 import configureStore from './store/configureStore';
 // components
-import Intro from 'views/Intro';
+import Game from 'Game';
 
 const store = configureStore();
 
 render(
   <Provider store={store}>
-    <Intro />
+    <Game />
   </Provider>,
   document.getElementById('app')
 );
