@@ -1,0 +1,65 @@
+{
+  "name": "webpack-ii-setup",
+  "version": "1.1.0",
+  "description": "Webpack II Setup",
+  "main": "index.ejs",
+  "scripts": {
+    "build": "rimraf build && webpack",
+    "start": "webpack-dev-server",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloMarch/webpack-ii-setup.git"
+  },
+  "keywords": [
+    "javascript",
+    "mojs",
+    "sass"
+  ],
+  "author": "Pablo Marchena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PabloMarch/webpack-ii-setup/issues"
+  },
+  "homepage": "https://github.com/PabloMarch/webpack-ii-setup#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-game-kit": "0.0.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "css-loader": "^0.23.1",
+    "enzyme": "^2.7.1",
+    "eslint": "^3.1.1",
+    "eslint-loader": "^1.6.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "json-loader": "^0.5.4",
+    "nyc": "^10.1.2",
+    "react-addons-test-utils": "^15.4.2",
+    "redux-ava": "^2.2.0",
+    "redux-logger": "^2.8.2",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
+    "webpack-merge": "^4.0.0",
+    "webpack-validator": "^2.2.3"
+  }
+}
