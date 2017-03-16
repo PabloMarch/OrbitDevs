@@ -1,7 +1,7 @@
 {
-  "name": "webpack-ii-setup",
+  "name": "orbitdevs-game",
   "version": "1.1.0",
-  "description": "Webpack II Setup",
+  "description": "OrbitDevs Game / React / Redux / Games libraries / Test",
   "main": "index.ejs",
   "scripts": {
     "build": "rimraf build && webpack",
@@ -10,20 +10,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PabloMarch/webpack-ii-setup.git"
+    "url": "git+https://github.com/PabloMarch/orbitdevs-game.git"
   },
   "keywords": [
-    "javascript",
+    "game",
+    "es6",
+    "react",
+    "redux",
     "mojs",
-    "sass"
+    "react-game-kit",
+    "scss"
   ],
   "author": "Pablo Marchena",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PabloMarch/webpack-ii-setup/issues"
+    "url": "https://github.com/PabloMarch/orbitdevs-game/issues"
   },
-  "homepage": "https://github.com/PabloMarch/webpack-ii-setup#readme",
+  "homepage": "https://github.com/PabloMarch/orbitdevs-game#readme",
   "dependencies": {
+    "mojs": "^0.2.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-game-kit": "0.0.2",

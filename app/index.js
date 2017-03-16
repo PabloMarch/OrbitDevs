@@ -6,13 +6,13 @@ import { Loop, Stage, World, Body } from 'react-game-kit';
 // config
 import configureStore from './store/configureStore';
 // components
-import Game from './components/Game';
+import Game1 from './games/Game1';
 
 const store = configureStore();
 
 render(
   <Provider store={store}>
-    <Game />
+    <Game1 />
   </Provider>,
   document.getElementById('app')
 );

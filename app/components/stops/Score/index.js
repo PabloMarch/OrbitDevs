@@ -2,9 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 export default class Score extends Component {
-  static propTypes = {
-    onResetGame: PropTypes.func,
-  };
 
   constructor(props) {
     super(props);
@@ -16,16 +13,22 @@ export default class Score extends Component {
         <header className="intro-head">
           <div className="intro-head-content">
             <h1><span>Congratulation Cosmonaut!!!</span></h1>
-            <p>
-              <strong>You Won!!! </strong>
-              <small>
-                <a href="#" onClick={this.props.onResetGame}>Again? Click here...</a>
-              </small>
-            </p>
+            <p><strong>You Won!!! Score: {this.props.score} </strong></p>
+            <p><a href="#" onClick={this.props.onResetGame}>Again? Click here...</a></p>
           </div>
         </header>
       </section>
     );
   };
 
+}
+
+Score.propTypes = {
+  score: PropTypes.number.isRequired,
+  onResetGame: PropTypes.func
+}
+
+Score.defaultProps = {
+  score: 0,
+  onResetGame: () => {}
 }

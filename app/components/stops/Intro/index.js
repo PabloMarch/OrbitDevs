@@ -6,9 +6,6 @@ import {
 } from './actions';
 
 class Intro extends Component {
-  static propTypes = {
-    onChangeScene: PropTypes.func,
-  };
 
   constructor(props) {
     super(props);
@@ -18,7 +15,7 @@ class Intro extends Component {
     if (e.keyCode === 32) {
       // this.startNoise.play();
       // console.log('Intro::onKeyPress:', e.keyCode);
-      this.props.onChangeScene(1);
+      this.props.onNextGameStep(1);
     }
   }
 
@@ -46,7 +43,7 @@ class Intro extends Component {
       <section id="game-scene--intro">
         <header className="intro-head">
           <div className="intro-head-content">
-            <h1><span>OrbitDevs</span> :: <span>Intro</span> :: <span>{this.props.intro.text}</span></h1>
+            <h1><span>OrbitDevs</span> :: <span>Game</span> :: <span>{this.props.intro.text}</span></h1>
             <p>press <span>space</span> to continue</p>
           </div>
         </header>
@@ -54,6 +51,14 @@ class Intro extends Component {
     );
   };
 
+}
+
+Intro.propTypes = {
+  onNextGameStep: PropTypes.func,
+}
+
+Intro.defaultProps = {
+  onNextGameStep: () => {}
 }
 
 function mapStateToProps(state) {
