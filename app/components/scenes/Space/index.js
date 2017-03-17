@@ -18,7 +18,8 @@ export default class Space extends Component {
       this.keyListener.LEFT,
       this.keyListener.RIGHT,
       this.keyListener.UP,
-      this.keyListener.DOWN
+      this.keyListener.DOWN,
+      this.keyListener.SPACE,
     ]);
   }
 
@@ -28,9 +29,9 @@ export default class Space extends Component {
 
   physicsInit = (engine) => {
     const ground = Matter.Bodies.rectangle(
-      512 * 3, 448,
+      512 * 3, 560,
       1024 * 3, 64,
-      { isStatic: true },
+      { isStatic: true }
     );
 
     const leftWall = Matter.Bodies.rectangle(
@@ -46,8 +47,8 @@ export default class Space extends Component {
     );
 
     Matter.World.addBody(engine.world, ground);
-    Matter.World.addBody(engine.world, leftWall);
-    Matter.World.addBody(engine.world, rightWall);
+    // Matter.World.addBody(engine.world, leftWall);
+    // Matter.World.addBody(engine.world, rightWall);
   }
 
   render() {

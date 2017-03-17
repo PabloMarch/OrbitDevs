@@ -6,6 +6,9 @@ export default class Astronaut extends Component {
   constructor(props) {
     super(props);
 
+    this.isJumping = false;
+    this.isFlying = false;
+
     this.state = {
       stageX: 0,
       position: {}
@@ -21,9 +24,30 @@ export default class Astronaut extends Component {
   }
 
   move = (body, x, y) => {
-    console.log('Astronaut::move: ', x, y);
+    console.log('Astronaut::WALKING ', body.position);
     Matter.Body.setVelocity(body, { x, y });
   }
+
+  fly = (body) => {
+    this.isFlying = true;
+    console.log('Astronaut::FLYING ', body);
+    Matter.Body.applyForce(
+      body,
+      { x: 0, y: 0 },
+      { x: 0, y: -0.007 },
+    );
+    Matter.Body.set(body, 'friction', 0.0001);
+  };
+
+  jump = (body) => {
+    this.isJumping = true;
+    Matter.Body.applyForce(
+      body,
+      { x: 0, y: 0 },
+      { x: 0, y: -0.20 },
+    );
+    Matter.Body.set(body, 'friction', 0.01);
+  };
 
   checkKeys = () => {
     const { keys } = this.props;
@@ -40,24 +64,32 @@ export default class Astronaut extends Component {
     }
 
     if (keys.isDown(keys.DOWN)) {
-      console.log('Astronaut::checkKeys: LEFT ');
+      console.log('Astronaut::checkKeys: DOWN ');
       this.move(body, 0, 5);
     }
 
     if (keys.isDown(keys.UP)) {
-      console.log('Astronaut::checkKeys: RIGHT ');
-      this.move(body, 0, -5);
+      console.log('Astronaut::checkKeys: UP ');
+      this.fly(body);
+    }
+
+    if (keys.isDown(keys.SPACE)) {
+      console.log('Astronaut::checkKeys: SPACE ');
+      if (!this.isJumping) {
+        this.jump(body, 0, -30);
+      }
     }
   }
 
   update = () => {
     const { body } = this.body;
 
-    console.log(body.position);
+    // console.log('Astronaut::update', body.position);
 
     const velY = parseFloat(body.velocity.y.toFixed(10));
 
     if (velY === 0) {
+      this.isJumping = false;
       Matter.Body.set(body, 'friction', 0.9999);
     }
 
@@ -88,7 +120,14 @@ export default class Astronaut extends Component {
           inertia={Infinity}
           ref={(b) => { this.body = b; }}
         >
-          <div style={{ width: 50, height: 75, backgroundColor: '#FF0' }}></div>
+          <div style={{ width: 50, height: 75 }}>
+            <div id="goku">
+          		<div className="head"></div>
+          		<div className="body"></div>
+          		<div className="leg"></div>
+          		{/* <div className="shadow"></div> */}
+          	</div>
+          </div>
         </Body>
       </div>
     );

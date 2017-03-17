@@ -1,0 +1,1060 @@
+$sd: #40b733;
+$bl: #000;
+$blu: #0080ff;
+$dblu: #0055aa;
+$ddblu: #001e3d;
+$skn: #ffbb80;
+$dskn: #c66b49;
+$dbrn: #3d1e00;
+$orn: #ff7700;
+$dorn: #aa5500;
+$zero: 0px;
+$ten: 10px;
+$minten: -10px;
+
+body{
+  background:#2a8e5c;
+}
+
+@-webkit-keyframes head{
+  0%{
+    top:0px;
+  }
+  50%{
+    top:6px;
+  }
+  100%{
+    top:0px;
+  }
+}
+
+@-webkit-keyframes body{
+  0%{
+    top:220px;
+  }
+  50%{
+    top:223px;
+  }
+  100%{
+    top:220px;
+  }
+}
+
+@-webkit-keyframes leg{
+  0%{
+    top:300px;
+  }
+  50%{
+    top:300px;
+  }
+  100%{
+    top:300px;
+  }
+}
+
+@keyframes head{
+  0%{
+    top:0px;
+  }
+  50%{
+    top:6px;
+  }
+  100%{
+    top:0px;
+  }
+}
+
+@keyframes body{
+  0%{
+    top:220px;
+  }
+  50%{
+    top:223px;
+  }
+  100%{
+    top:220px;
+  }
+}
+
+@keyframes leg{
+  0%{
+    top:300px;
+  }
+  50%{
+    top:300px;
+  }
+  100%{
+    top:300px;
+  }
+}
+
+#goku{
+  margin-top:30px;
+  background:#fff;
+  position:relative;
+    -ms-transform: scale(0.3); /* IE 9 */
+    -webkit-transform: scale(0.3); /* Chrome, Safari, Opera */
+    transform: scale(0.3);
+}
+
+.shadow{
+  position:absolute;
+  top:450px;
+  left:50%;
+  width: 10px;
+  height: 10px;
+  background:$sd;
+  box-shadow:
+    /* line 1 */
+    // $minten*12 $minten #28801E,
+    $minten*11 $minten $sd,
+    $minten*10 $minten $sd,
+    $minten*9 $minten $sd,
+    $minten*8 $minten $sd,
+    $minten*7 $minten $sd,
+    $minten*6 $minten $sd,
+    $minten*5 $minten $sd,
+    $minten*4 $minten $sd,
+    $minten*3 $minten $sd,
+    $minten*2 $minten $sd,
+    $minten*1 $minten $sd,
+    $zero $minten $sd,
+    $ten $minten $sd,
+    $ten*2 $minten $sd,
+    $ten*3 $minten $sd,
+    $ten*4 $minten $sd,
+    $ten*5 $minten $sd,
+    $ten*6 $minten $sd,
+    /* line 2 */
+    // $minten*13 $zero #176d42,
+    $minten*12 $zero $sd,
+    $minten*11 $zero $sd,
+    $minten*10 $zero $sd,
+    $minten*9 $zero $sd,
+    $minten*8 $zero $sd,
+    $minten*7 $zero $sd,
+    $minten*6 $zero $sd,
+    $minten*5 $zero $sd,
+    $minten*4 $zero $sd,
+    $minten*3 $zero $sd,
+    $minten*2 $zero $sd,
+    $minten*1 $zero $sd,
+    $zero $zero $sd,
+    $ten $zero $sd,
+    $ten*2 $zero $sd,
+    $ten*3 $zero $sd,
+    $ten*4 $zero $sd,
+    $ten*5 $zero $sd,
+    $ten*6 $zero $sd,
+    /* line 3 */
+    // $minten*13 $ten #176d42,
+    $minten*12 $ten $sd,
+    $minten*11 $ten $sd,
+    $minten*10 $ten $sd,
+    $minten*9 $ten $sd,
+    $minten*8 $ten $sd,
+    $minten*7 $ten $sd,
+    $minten*6 $ten $sd,
+    $minten*5 $ten $sd,
+    $minten*4 $ten $sd,
+    $minten*3 $ten $sd,
+    $minten*2 $ten $sd,
+    $minten*1 $ten $sd,
+    $zero $ten $sd,
+    $ten $ten $sd,
+    $ten*2 $ten $sd,
+    $ten*3 $ten $sd,
+    $ten*4 $ten $sd,
+    $ten*5 $ten $sd,
+    $ten*6 $ten $sd,
+    /* line 4 */
+    // $minten*13 $ten*2 #176d42,
+    $minten*12 $ten*2 $sd,
+    $minten*11 $ten*2 $sd,
+    $minten*10 $ten*2 $sd,
+    $minten*9 $ten*2 $sd,
+    $minten*8 $ten*2 $sd,
+    $minten*7 $ten*2 $sd,
+    $minten*6 $ten*2 $sd,
+    $minten*5 $ten*2 $sd,
+    $minten*4 $ten*2 $sd,
+    $minten*3 $ten*2 $sd,
+    $minten*1 $ten*2 $sd,
+    $zero $ten*2 $sd,
+    $ten $ten*2 $sd,
+    $ten*2 $ten*2 $sd,
+    $ten*3 $ten*2 $sd,
+    $ten*4 $ten*2 $sd,
+    $ten*5 $ten*2 $sd,
+    $ten*6 $ten*2 $sd,
+    $ten*7 $ten*2 $sd,
+    /* line 5 */
+    $minten*12 $ten*3 $sd,
+    $minten*11 $ten*3 $sd,
+    $minten*10 $ten*3 $sd,
+    $minten*9 $ten*3 $sd,
+    $minten*8 $ten*3 $sd,
+    $minten*7 $ten*3 $sd,
+    $minten*6 $ten*3 $sd,
+    $minten*5 $ten*3 $sd,
+
+    $minten*1 $zero transparent
+  ;
+}
+.leg{
+  -webkit-animation: leg 1s infinite;
+  -webkit-animation-timing-function: linear;
+  animation:leg 1s infinite;
+  animation-timing-function: linear;
+
+  position:absolute;
+  z-index:20;
+  top:300px;
+  left:50%;
+  width: 10px;
+  height: 10px;
+  background:$bl;
+  box-shadow:
+    /* line 1 */
+    $minten*5 $zero $bl,
+    $minten*4 $zero $bl,
+    $minten*3 $zero $bl,
+    $minten*2 $zero $bl,
+    $minten*1 $zero $bl,
+    $ten $zero $bl,
+    $ten*2 $zero $bl,
+    $ten*3 $zero $bl,
+    /* line 2 */
+    $minten*5 $ten $bl,
+    $minten*4 $ten $ddblu,
+    $minten*3 $ten $dblu,
+    $minten*2 $ten $blu,
+    $minten*1 $ten $bl,
+    $zero $ten $blu,
+    $ten $ten $bl,
+    $ten*2 $ten $dblu,
+    $ten*3 $ten $bl,
+    /* line 2 */
+    $minten*5 $ten*2 $bl,
+    $minten*4 $ten*2 $bl,
+    $minten*3 $ten*2 $bl,
+    $minten*2 $ten*2 $bl,
+    $minten*1 $ten*2 $dblu,
+    $zero $ten*2 $bl,
+    $ten $ten*2 $ddblu,
+    $ten*2 $ten*2 $bl,
+    $ten*3 $ten*2 $bl,
+    $ten*4 $ten*2 $bl,
+    /* line 3 */
+    $minten*7 $ten*3 $bl,
+    $minten*6 $ten*3 $bl,
+    $minten*5 $ten*3 $dbrn,
+    $minten*4 $ten*3 $dorn,
+    $minten*3 $ten*3 $dorn,
+    $minten*2 $ten*3 $bl,
+    $minten*1 $ten*3 $blu,
+    $zero $ten*3 $ddblu,
+    $ten $ten*3 $dblu,
+    $ten*2 $ten*3 $bl,
+    $ten*3 $ten*3 $dbrn,
+    $ten*4 $ten*3 $bl,
+    /* line 4 */
+    $minten*7 $ten*4 $bl,
+    $minten*6 $ten*4 $bl,
+    $minten*5 $ten*4 $dorn,
+    $minten*4 $ten*4 $orn,
+    $minten*3 $ten*4 $orn,
+    $minten*2 $ten*4 $bl,
+    $minten*1 $ten*4 $blu,
+    $zero $ten*4 $ddblu,
+    $ten $ten*4 $blu,
+    $ten*2 $ten*4 $bl,
+    $ten*3 $ten*4 $dbrn,
+    $ten*4 $ten*4 $bl,
+    /* line 5 */
+    $minten*8 $ten*5 $bl,
+    $minten*7 $ten*5 $bl,
+    $minten*6 $ten*5 $bl,
+    $minten*5 $ten*5 $orn,
+    $minten*4 $ten*5 $orn,
+    $minten*3 $ten*5 $orn,
+    $minten*2 $ten*5 $bl,
+    $minten*1 $ten*5 $blu,
+    $zero $ten*5 $ddblu,
+    $ten $ten*5 $blu,
+    $ten*2 $ten*5 $bl,
+    $ten*3 $ten*5 $dorn,
+    $ten*4 $ten*5 $bl,
+    $ten*5 $ten*5 $bl,
+    /* line 6 */
+    $minten*8 $ten*6 $bl,
+    $minten*7 $ten*6 $dorn,
+    $minten*6 $ten*6 $dorn,
+    $minten*5 $ten*6 $orn,
+    $minten*4 $ten*6 $orn,
+    $minten*3 $ten*6 $orn,
+    $minten*2 $ten*6 $bl,
+    $minten*1 $ten*6 $dblu,
+    $zero $ten*6 $ddblu,
+    $ten $ten*6 $blu,
+    $ten*2 $ten*6 $bl,
+    $ten*3 $ten*6 $dorn,
+    $ten*4 $ten*6 $dbrn,
+    $ten*5 $ten*6 $bl,
+    /* line 7 */
+    $minten*8 $ten*7 $bl,
+    $minten*7 $ten*7 $dorn,
+    $minten*6 $ten*7 $orn,
+    $minten*5 $ten*7 $orn,
+    $minten*4 $ten*7 $orn,
+    $minten*3 $ten*7 $orn,
+    $minten*2 $ten*7 $bl,
+    $minten*1 $ten*7 $ddblu,
+    $zero $ten*7 $ddblu,
+    $ten $ten*7 $blu,
+    $ten*2 $ten*7 $bl,
+    $ten*3 $ten*7 $dorn,
+    $ten*4 $ten*7 $dorn,
+    $ten*5 $ten*7 $bl,
+    /* line 8 */
+    $minten*8 $ten*8 $bl,
+    $minten*7 $ten*8 $dbrn,
+    $minten*6 $ten*8 $dorn,
+    $minten*5 $ten*8 $orn,
+    $minten*4 $ten*8 $orn,
+    $minten*3 $ten*8 $dorn,
+    $minten*2 $ten*8 $bl,
+    $minten*1 $ten*8 $bl,
+    $zero $ten*8 $dbrn,
+    $ten $ten*8 $bl,
+    $ten*2 $ten*8 $dorn,
+    $ten*3 $ten*8 $dorn,
+    $ten*4 $ten*8 $dorn,
+    $ten*5 $ten*8 $bl,
+    /* line 9 */
+    $minten*9 $ten*9 $bl,
+    $minten*8 $ten*9 $dorn,
+    $minten*7 $ten*9 $dbrn,
+    $minten*6 $ten*9 $dbrn,
+    $minten*5 $ten*9 $dorn,
+    $minten*4 $ten*9 $dorn,
+    $minten*3 $ten*9 $bl,
+    $minten*2 $ten*9 $bl,
+    $minten*1 $ten*9 $bl,
+    $zero $ten*9 $dbrn,
+    $ten $ten*9 $dbrn,
+    $ten*2 $ten*9 $dbrn,
+    $ten*3 $ten*9 $dorn,
+    $ten*4 $ten*9 $dorn,
+    $ten*5 $ten*9 $bl,
+    /* line 10 */
+    $minten*9 $ten*10 $bl,
+    $minten*8 $ten*10 $orn,
+    $minten*7 $ten*10 $dorn,
+    $minten*6 $ten*10 $dorn,
+    $minten*5 $ten*10 $dorn,
+    $minten*4 $ten*10 $dbrn,
+    $minten*3 $ten*10 $bl,
+    $minten*1 $ten*10 $bl,
+    $zero $ten*10 $bl,
+    $ten $ten*10 $dbrn,
+    $ten*2 $ten*10 $dorn,
+    $ten*3 $ten*10 $dorn,
+    $ten*4 $ten*10 $dbrn,
+    $ten*5 $ten*10 $bl,
+    /* line 11 */
+    $minten*10 $ten*11 $bl,
+    $minten*9 $ten*11 $bl,
+    $minten*8 $ten*11 $bl,
+    $minten*7 $ten*11 $orn,
+    $minten*6 $ten*11 $orn,
+    $minten*5 $ten*11 $orn,
+    $minten*4 $ten*11 $bl,
+    $minten*1 $ten*11 $bl,
+    $zero $ten*11 $bl,
+    $ten $ten*11 $bl,
+    $ten*2 $ten*11 $dbrn,
+    $ten*3 $ten*11 $dbrn,
+    $ten*4 $ten*11 $bl,
+    /* line 12 */
+    $minten*10 $ten*12 $bl,
+    $minten*9 $ten*12 $ddblu,
+    $minten*8 $ten*12 $blu,
+    $minten*7 $ten*12 #ffbb00,
+    $minten*6 $ten*12 $blu,
+    $minten*5 $ten*12 $bl,
+    $minten*4 $ten*12 $bl,
+    $minten*1 $ten*12 $bl,
+    $zero $ten*12 $ddblu,
+    $ten $ten*12 $ddblu,
+    $ten*2 $ten*12 $blu,
+    $ten*3 $ten*12 #ffbb00,
+    $ten*4 $ten*12 $bl,
+    /* line 13 */
+    $minten*10 $ten*13 $bl,
+    $minten*9 $ten*13 $dblu,
+    $minten*8 $ten*13 #ffff00,
+    $minten*7 $ten*13 #ffbb00,
+    $minten*6 $ten*13 $dblu,
+    $minten*5 $ten*13 $bl,
+    $minten*1 $ten*13 $bl,
+    $zero $ten*13 $bl,
+    $ten $ten*13 $ddblu,
+    $ten*2 $ten*13 $bl,
+    $ten*3 $ten*13 #ff0000,
+    $ten*4 $ten*13 $bl,
+    /* line 14 */
+    $minten*11 $ten*14 $bl,
+    $minten*10 $ten*14 $dblu,
+    $minten*9 $ten*14 #ff0000,
+    $minten*8 $ten*14 #ff0000,
+    $minten*7 $ten*14 $ddblu,
+    $minten*6 $ten*14 $ddblu,
+    $minten*5 $ten*14 $bl,
+    $minten*1 $ten*14 $bl,
+    $zero $ten*14 $dbrn,
+    $ten $ten*14 #ff0000,
+    $ten*2 $ten*14 $dblu,
+    $ten*3 $ten*14 $dblu,
+    $ten*4 $ten*14 #ffbb00,
+    $ten*5 $ten*14 $bl,
+    /* line 15 */
+    $minten*11 $ten*15 $bl,
+    $minten*10 $ten*15 $dblu,
+    $minten*9 $ten*15 #ffbb00,
+    $minten*8 $ten*15 $blu,
+    $minten*7 $ten*15 #ff0000,
+    $minten*6 $ten*15 $bl,
+    $zero $ten*15 $bl,
+    $ten $ten*15 $ddblu,
+    $ten*2 $ten*15 $dblu,
+    $ten*3 $ten*15 $dblu,
+    $ten*4 $ten*15 $dblu,
+    $ten*5 $ten*15 #ffbb00,
+    $ten*6 $ten*15 $bl,
+    /* line 16 */
+    $minten*11 $ten*16 $bl,
+    $minten*10 $ten*16 $ddblu,
+    $minten*9 $ten*16 $dorn,
+    $minten*8 $ten*16 $blu,
+    $minten*7 $ten*16 $blu,
+    $minten*6 $ten*16 $bl,
+    $zero $ten*16 $bl,
+    $ten $ten*16 $bl,
+    $ten*2 $ten*16 $bl,
+    $ten*3 $ten*16 $bl,
+    $ten*4 $ten*16 $bl,
+    $ten*5 $ten*16 $bl,
+    $ten*6 $ten*16 $bl,
+    /* line 17 */
+    $minten*11 $ten*17 $bl,
+    $minten*10 $ten*17 $bl,
+    $minten*9 $ten*17 $bl,
+    $minten*8 $ten*17 $bl,
+    $minten*7 $ten*17 $bl,
+    $minten*6 $ten*17 $bl
+  ;
+}
+.body{
+  -webkit-animation:body 1s infinite;
+  -webkit-animation-timing-function: linear;
+  animation:body 1s infinite;
+  animation-timing-function: linear;
+
+  position:absolute;
+  top:220px;
+  left:50%;
+  width: 10px;
+  height: 10px;
+  background:transparent;
+  box-shadow:
+    /* line 1 */
+    $minten*9 $zero $bl,
+    $minten*8 $zero $dbrn,
+    $minten*7 $zero $dbrn,
+    $minten*6 $zero $dorn,
+    $minten*5 $zero $dorn,
+    $ten*4 $zero $bl,
+    /* line 2 */
+    $minten*10 $ten $bl,
+    $minten*9 $ten $ddblu,
+    $minten*8 $ten $blu,
+    $minten*7 $ten $blu,
+    $minten*6 $ten $dbrn,
+    $minten*5 $ten $orn,
+    $minten*4 $ten $dorn,
+    $ten*3 $ten $dorn,
+    $ten*4 $ten $bl,
+    /* line 2 */
+    $minten*10 $ten*2 $bl,
+    $minten*9 $ten*2 $bl,
+    $minten*8 $ten*2 $dblu,
+    $minten*7 $ten*2 $dblu,
+    $minten*6 $ten*2 $blu,
+    $minten*5 $ten*2 $orn,
+    $minten*4 $ten*2 $orn,
+    $minten*3 $ten*2 $bl,
+    $minten*2 $ten*2 $dskn,
+    $minten*1 $ten*2 $skn,
+    $zero $ten*2 $dskn,
+    $ten*1 $ten*2 $skn,
+    $ten*2 $ten*2 $bl,
+    $ten*3 $ten*2 $orn,
+    $ten*4 $ten*2 $bl,
+    /* line 3 */
+    $minten*11 $ten*3 $bl,
+    $minten*10 $ten*3 $dbrn,
+    $minten*9 $ten*3 $dskn,
+    $minten*8 $ten*3 $bl,
+    $minten*7 $ten*3 $dblu,
+    $minten*6 $ten*3 $dblu,
+    $minten*5 $ten*3 $dorn,
+    $minten*4 $ten*3 $orn,
+    $minten*3 $ten*3 $dorn,
+    $minten*2 $ten*3 $dblu,
+    $minten*1 $ten*3 $blu,
+    $zero $ten*3 $blu,
+    $ten*1 $ten*3 $blu,
+    $ten*2 $ten*3 $bl,
+    $ten*3 $ten*3 $orn,
+    $ten*4 $ten*3 $bl,
+    /* line 4 */
+    $minten*11 $ten*4 $bl,
+    $minten*10 $ten*4 $dskn,
+    $minten*9 $ten*4 $dskn,
+    $minten*8 $ten*4 $dskn,
+    $minten*7 $ten*4 $bl,
+    $minten*6 $ten*4 $bl,
+    $minten*5 $ten*4 $bl,
+    $minten*4 $ten*4 $orn,
+    $minten*3 $ten*4 $orn,
+    $minten*2 $ten*4 $bl,
+    $minten*1 $ten*4 $dblu,
+    $zero $ten*4 $dblu,
+    $ten*1 $ten*4 $blu,
+    $ten*2 $ten*4 $bl,
+    $ten*3 $ten*4 #808080,
+    $ten*4 $ten*4 $bl,
+    /* line 5 */
+    $minten*11 $ten*5 $bl,
+    $minten*10 $ten*5 $dskn,
+    $minten*9 $ten*5 $skn,
+    $minten*8 $ten*5 $skn,
+    $minten*7 $ten*5 $bl,
+    $minten*6 $ten*5 $bl,
+    $minten*5 $ten*5 $dbrn,
+    $minten*4 $ten*5 $dorn,
+    $minten*3 $ten*5 $orn,
+    $minten*2 $ten*5 $orn,
+    $minten*1 $ten*5 $bl,
+    $zero $ten*5 $blu,
+    $ten*1 $ten*5 $bl,
+    $ten*2 $ten*5 #808080,
+    $ten*3 $ten*5 $dorn,
+    $ten*4 $ten*5 $bl,
+    $ten*5 $ten*5 $bl,
+    /* line 6 */
+    $minten*12 $ten*6 $bl,
+    $minten*11 $ten*6 $dskn,
+    $minten*10 $ten*6 $dbrn,
+    $minten*9 $ten*6 $skn,
+    $minten*8 $ten*6 $dbrn,
+    $minten*7 $ten*6 $bl,
+    $minten*6 $ten*6 $bl,
+    $minten*5 $ten*6 $dskn,
+    $minten*4 $ten*6 $bl,
+    $minten*3 $ten*6 $dorn,
+    $minten*2 $ten*6 $orn,
+    $minten*1 $ten*6 $orn,
+    $zero $ten*6 $bl,
+    $ten*1 $ten*6 $orn,
+    $ten*2 $ten*6 #808080,
+    $ten*3 $ten*6 $bl,
+    $ten*4 $ten*6 $dskn,
+    $ten*5 $ten*6 $bl,
+    /* line 7 */
+    $minten*12 $ten*7 $bl,
+    $minten*11 $ten*7 $dblu,
+    $minten*10 $ten*7 $dskn,
+    $minten*9 $ten*7 $dskn,
+    $minten*8 $ten*7 $dbrn,
+    $minten*7 $ten*7 $dskn,
+    $minten*6 $ten*7 $dskn,
+    $minten*5 $ten*7 $bl,
+    $minten*4 $ten*7 $dbrn,
+    $minten*3 $ten*7 $dbrn,
+    $minten*2 $ten*7 $dorn,
+    $minten*1 $ten*7 $orn,
+    $zero $ten*7 $orn,
+    $ten*1 $ten*7 $orn,
+    $ten*2 $ten*7 $dorn,
+    $ten*3 $ten*7 $bl,
+    $ten*4 $ten*7 $skn,
+    $ten*5 $ten*7 $bl,
+    /* line 8 */
+    $minten*12 $ten*8 $bl,
+    $minten*11 $ten*8 $dblu,
+    $minten*10 $ten*8 $blu,
+    $minten*9 $ten*8 $dblu,
+    $minten*8 $ten*8 $bl,
+    $ten*4 $ten*8 $blu,
+    $ten*5 $ten*8 $bl,
+    /* line 9 */
+    $minten*12 $ten*9 $bl,
+    $minten*11 $ten*9 $dblu,
+    $minten*10 $ten*9 $blu,
+    $minten*9 $ten*9 $ddblu,
+    $ten*4 $ten*9 $dblu,
+    $ten*5 $ten*9 $blu,
+    $ten*6 $ten*9 $bl,
+    /* line 10 */
+    $minten*13 $ten*10 $bl,
+    $minten*12 $ten*10 $dskn,
+    $minten*11 $ten*10 $dskn,
+    $minten*10 $ten*10 $skn,
+    $minten*9 $ten*10 $dskn,
+    $minten*8 $ten*10 $dbrn,
+    $ten*5 $ten*10 $skn,
+    $ten*6 $ten*10 $bl,
+    /* line 11 */
+    $minten*13 $ten*11 $bl,
+    $minten*12 $ten*11 $dskn,
+    $minten*11 $ten*11 $skn,
+    $minten*10 $ten*11 $skn,
+    $minten*9 $ten*11 $skn,
+    $minten*8 $ten*11 $skn,
+    $ten*5 $ten*11 $skn,
+    $ten*6 $ten*11 $bl,
+    /* line 12 */
+    $minten*13 $ten*12 $bl,
+    $minten*12 $ten*12 $dskn,
+    $minten*11 $ten*12 $skn,
+    $minten*10 $ten*12 $skn,
+    $minten*9 $ten*12 $bl,
+    $minten*8 $ten*12 $dskn,
+    $ten*5 $ten*12 $dskn,
+    $ten*6 $ten*12 $bl,
+    /* line 13 */
+    $minten*13 $ten*13 $bl,
+    $minten*12 $ten*13 $dskn,
+    $minten*11 $ten*13 $bl,
+    $minten*10 $ten*13 $skn,
+    $minten*9 $ten*13 $bl,
+    /* line 14 */
+    $minten*12 $ten*14 $bl,
+    $minten*11 $ten*14 $bl,
+    $minten*10 $ten*14 $dskn,
+    $minten*9 $ten*14 $bl,
+    /* line 15 */
+    $minten*10 $ten*15 $bl,
+    $minten*9 $ten*15 $dskn,
+    /* line 16 */
+    $minten*9 $ten*16 $bl
+  ;
+}
+.head {
+  -webkit-animation:head 1s infinite;
+  -webkit-animation-timing-function: linear;
+  animation:head 1s infinite;
+  animation-timing-function: linear;
+
+  position:absolute;
+  z-index:999;
+  top:0px;
+  left:50%;
+  width: 10px;
+  height: 10px;
+  background:$bl;
+  box-shadow:
+    /* line 1 */
+    $ten $zero $bl,
+    $ten*2 $zero $bl,
+    $ten*3 $zero $bl,
+    $ten*4 $zero $bl,
+    $ten*5 $zero $bl,
+    /* line 2 */
+    $minten*2 $ten $bl,
+    $minten $ten $bl,
+    $zero $ten $bl,
+    $ten $ten $bl,
+    $ten*2 $ten $bl,
+    $ten*3 $ten $bl,
+    /* line 3 */
+    $minten*3 $ten*2 $bl,
+    $minten*2 $ten*2 $bl,
+    $minten $ten*2 $bl,
+    $zero $ten*2 $bl,
+    $ten*1 $ten*2 $bl,
+    $ten*2 $ten*2 $bl,
+    /* line 4 */
+    $minten*4 $ten*3 $bl,
+    $minten*3 $ten*3 $bl,
+    $minten*2 $ten*3 $bl,
+    $minten $ten*3 $bl,
+    $zero $ten*3 $bl,
+    $ten*1 $ten*3 $bl,
+    $ten*2 $ten*3 $bl,
+    /* line 5 */
+    $minten*4 $ten*4 $bl,
+    $minten*3 $ten*4 $bl,
+    $minten*2 $ten*4 $bl,
+    $minten $ten*4 $bl,
+    $zero $ten*4 $bl,
+    $ten*1 $ten*4 $bl,
+    $ten*4 $ten*4 $bl,
+    $ten*5 $ten*4 $bl,
+    $ten*6 $ten*4 $bl,
+    $ten*7 $ten*4 $bl,
+    /* line 6 */
+    $minten*5 $ten*5 $bl,
+    $minten*4 $ten*5 $bl,
+    $minten*3 $ten*5 $bl,
+    $minten*2 $ten*5 $bl,
+    $minten $ten*5 $bl,
+    $zero $ten*5 $bl,
+    $ten*1 $ten*5 $bl,
+    $ten*3 $ten*5 $bl,
+    $ten*4 $ten*5 $bl,
+    $ten*5 $ten*5 $bl,
+    $ten*6 $ten*5 $bl,
+    $ten*7 $ten*5 $bl,
+    $ten*8 $ten*5 $bl,
+    $ten*9 $ten*5 $bl,
+    /* line 7 */
+    $minten*5 $ten*6 $bl,
+    $minten*4 $ten*6 $bl,
+    $minten*3 $ten*6 $bl,
+    $minten*2 $ten*6 $bl,
+    $minten $ten*6 $bl,
+    $zero $ten*6 $bl,
+    $ten*1 $ten*6 $bl,
+    $ten*2 $ten*6 $bl,
+    $ten*3 $ten*6 $bl,
+    $ten*4 $ten*6 $bl,
+    $ten*5 $ten*6 $bl,
+    $ten*6 $ten*6 $bl,
+    $ten*7 $ten*6 $bl,
+    $ten*8 $ten*6 $bl,
+    $ten*9 $ten*6 $bl,
+    $ten*10 $ten*6 $bl,
+    /* line 8 */
+    $minten*5 $ten*7 $bl,
+    $minten*4 $ten*7 $bl,
+    $minten*3 $ten*7 $bl,
+    $minten*2 $ten*7 $bl,
+    $minten $ten*7 $bl,
+    $zero $ten*7 $bl,
+    $ten*1 $ten*7 $bl,
+    $ten*2 $ten*7 $bl,
+    $ten*3 $ten*7 $bl,
+    $ten*4 $ten*7 $bl,
+    $ten*5 $ten*7 $bl,
+    $ten*6 $ten*7 $bl,
+    $ten*7 $ten*7 $bl,
+    $ten*8 $ten*7 $bl,
+    $ten*9 $ten*7 $bl,
+    $ten*10 $ten*7 $bl,
+    $ten*11 $ten*7 $bl,
+    /* line 9 */
+    $minten*5 $ten*8 $bl,
+    $minten*4 $ten*8 $bl,
+    $minten*3 $ten*8 $bl,
+    $minten*2 $ten*8 $bl,
+    $minten $ten*8 $bl,
+    $zero $ten*8 $bl,
+    $ten*1 $ten*8 $bl,
+    $ten*2 $ten*8 $bl,
+    $ten*3 $ten*8 $bl,
+    $ten*4 $ten*8 $bl,
+    $ten*5 $ten*8 $bl,
+    $ten*6 $ten*8 $bl,
+    $ten*7 $ten*8 $bl,
+    $ten*8 $ten*8 $bl,
+    $ten*9 $ten*8 $bl,
+    $ten*10 $ten*8 $bl,
+    $ten*11 $ten*8 $bl,
+    $ten*12 $ten*8 $bl,
+    /* line 10 */
+    $minten*7 $ten*9 $bl,
+    $minten*6 $ten*9 $bl,
+    $minten*5 $ten*9 $bl,
+    $minten*4 $ten*9 $bl,
+    $minten*3 $ten*9 $bl,
+    $minten*2 $ten*9 $bl,
+    $minten $ten*9 $bl,
+    $zero $ten*9 $bl,
+    $ten*1 $ten*9 $bl,
+    $ten*2 $ten*9 $bl,
+    $ten*3 $ten*9 $bl,
+    $ten*4 $ten*9 $bl,
+    $ten*5 $ten*9 $bl,
+    $ten*6 $ten*9 $bl,
+    $ten*7 $ten*9 $bl,
+    $ten*8 $ten*9 $bl,
+    $ten*9 $ten*9 $bl,
+    $ten*10 $ten*9 $bl,
+    $ten*11 $ten*9 $bl,
+    $ten*12 $ten*9 $bl,
+    /* line 11 */
+    $minten*8 $ten*10 $bl,
+    $minten*7 $ten*10 $bl,
+    $minten*6 $ten*10 $bl,
+    $minten*5 $ten*10 $bl,
+    $minten*4 $ten*10 $bl,
+    $minten*3 $ten*10 $bl,
+    $minten*2 $ten*10 $bl,
+    $minten $ten*10 $bl,
+    $zero $ten*10 $bl,
+    $ten*1 $ten*10 $bl,
+    $ten*2 $ten*10 $bl,
+    $ten*3 $ten*10 $bl,
+    $ten*4 $ten*10 $bl,
+    $ten*5 $ten*10 $bl,
+    $ten*6 $ten*10 $bl,
+    $ten*7 $ten*10 $bl,
+    $ten*8 $ten*10 $bl,
+    $ten*9 $ten*10 $bl,
+    /* line 12 */
+    $minten*9 $ten*11 $bl,
+    $minten*8 $ten*11 $bl,
+    $minten*7 $ten*11 $bl,
+    $minten*6 $ten*11 $bl,
+    $minten*5 $ten*11 $bl,
+    $minten*4 $ten*11 $bl,
+    $minten*3 $ten*11 $bl,
+    $minten*2 $ten*11 $bl,
+    $minten $ten*11 $bl,
+    $zero $ten*11 $bl,
+    $ten*1 $ten*11 $bl,
+    $ten*2 $ten*11 $bl,
+    $ten*3 $ten*11 $bl,
+    $ten*4 $ten*11 $bl,
+    $ten*5 $ten*11 $bl,
+    $ten*6 $ten*11 $bl,
+    $ten*7 $ten*11 $bl,
+    /* line 13 */
+    $minten*9 $ten*12 $bl,
+    $minten*8 $ten*12 $bl,
+    $minten*7 $ten*12 $bl,
+    $minten*6 $ten*12 $bl,
+    $minten*5 $ten*12 $bl,
+    $minten*4 $ten*12 $bl,
+    $minten*3 $ten*12 $bl,
+    $minten*2 $ten*12 $bl,
+    $minten $ten*12 $bl,
+    $zero $ten*12 $bl,
+    $ten*1 $ten*12 $bl,
+    $ten*2 $ten*12 $bl,
+    $ten*3 $ten*12 $bl,
+    $ten*4 $ten*12 $bl,
+    $ten*5 $ten*12 $bl,
+    $ten*6 $ten*12 $bl,
+    /* line 14 */
+    $minten*13 $ten*13 $bl,
+    $minten*12 $ten*13 $bl,
+    $minten*11 $ten*13 $bl,
+    $minten*10 $ten*13 $bl,
+    $minten*9 $ten*13 $bl,
+    $minten*8 $ten*13 $bl,
+    $minten*7 $ten*13 $bl,
+    $minten*6 $ten*13 $bl,
+    $minten*5 $ten*13 $bl,
+    $minten*4 $ten*13 $bl,
+    $minten*3 $ten*13 $bl,
+    $minten*2 $ten*13 $bl,
+    $minten $ten*13 $bl,
+    $zero $ten*13 $bl,
+    $ten*1 $ten*13 $bl,
+    $ten*2 $ten*13 $bl,
+    $ten*3 $ten*13 $bl,
+    $ten*4 $ten*13 $bl,
+    $ten*5 $ten*13 $bl,
+    $ten*6 $ten*13 $bl,
+    $ten*7 $ten*13 $bl,
+    $ten*8 $ten*13 $bl,
+    /* line 15 */
+    $minten*11 $ten*14 $bl,
+    $minten*10 $ten*14 $bl,
+    $minten*9 $ten*14 $bl,
+    $minten*8 $ten*14 $bl,
+    $minten*7 $ten*14 $bl,
+    $minten*6 $ten*14 $bl,
+    $minten*5 $ten*14 $bl,
+    $minten*4 $ten*14 $bl,
+    $minten*3 $ten*14 $bl,
+    $minten*2 $ten*14 $bl,
+    $minten $ten*14 $bl,
+    $zero $ten*14 #c66b49,
+    $ten*1 $ten*14 $bl,
+    $ten*2 $ten*14 $bl,
+    $ten*3 $ten*14 $bl,
+    $ten*4 $ten*14 $bl,
+    $ten*5 $ten*14 $bl,
+    $ten*6 $ten*14 $bl,
+    $ten*7 $ten*14 $bl,
+    $ten*8 $ten*14 $bl,
+    $ten*9 $ten*14 $bl,
+    $ten*10 $ten*14 $bl,
+    /* line 16 */
+    $minten*13 $ten*15 $bl,
+    $minten*12 $ten*15 $bl,
+    $minten*11 $ten*15 $bl,
+    $minten*10 $ten*15 $bl,
+    $minten*9 $ten*15 $bl,
+    $minten*8 $ten*15 $bl,
+    $minten*7 $ten*15 $bl,
+    $minten*6 $ten*15 $bl,
+    $minten*5 $ten*15 $bl,
+    $minten*4 $ten*15 #c66b49,
+    $minten*3 $ten*15 $bl,
+    $minten*2 $ten*15 $bl,
+    $minten $ten*15 $bl,
+    $zero $ten*15 #c66b49,
+    $ten*1 $ten*15 #c66b49,
+    $ten*2 $ten*15 #c66b49,
+    $ten*3 $ten*15 $bl,
+    $ten*4 $ten*15 $bl,
+    $ten*5 $ten*15 $bl,
+    $ten*6 $ten*15 $bl,
+    $ten*7 $ten*15 $bl,
+    $ten*8 $ten*15 $bl,
+    $ten*9 $ten*15 $bl,
+    $ten*10 $ten*15 $bl,
+    $ten*11 $ten*15 $bl,
+    /* line 17 */
+    $minten*15 $ten*16 $bl,
+    $minten*14 $ten*16 $bl,
+    $minten*13 $ten*16 $bl,
+    $minten*12 $ten*16 $bl,
+    $minten*11 $ten*16 $bl,
+    $minten*10 $ten*16 $bl,
+    $minten*9 $ten*16 $bl,
+    $minten*8 $ten*16 $bl,
+    $minten*7 $ten*16 $bl,
+    $minten*6 $ten*16 $bl,
+    $minten*5 $ten*16 $bl,
+    $minten*4 $ten*16 #c66b49,
+    $minten*3 $ten*16 #c66b49,
+    $minten*2 $ten*16 $bl,
+    $minten $ten*16 $bl,
+    $zero $ten*16 #c66b49,
+    $ten*1 $ten*16 #ffbb80,
+    $ten*2 $ten*16 #ffbb80,
+    $ten*3 $ten*16 #c66b49,
+    $ten*4 $ten*16 $bl,
+    $ten*5 $ten*16 $bl,
+    $ten*6 $ten*16 $bl,
+    $ten*7 $ten*16 $bl,
+    $ten*8 $ten*16 $bl,
+    /* line 18 */
+    $minten*14 $ten*17 $bl,
+    $minten*13 $ten*17 $bl,
+    $minten*12 $ten*17 $bl,
+    $minten*11 $ten*17 $bl,
+    $minten*10 $ten*17 $bl,
+    $minten*9 $ten*17 $bl,
+    $minten*8 $ten*17 $bl,
+    $minten*7 $ten*17 #ffbb80,
+    $minten*6 $ten*17 $bl,
+    $minten*5 $ten*17 $bl,
+    $minten*4 $ten*17 $bl,
+    $minten*3 $ten*17 $bl,
+    $minten*2 $ten*17 $bl,
+    $minten $ten*17 $bl,
+    $zero $ten*17 #ffbb80,
+    $ten*1 $ten*17 #ffbb80,
+    $ten*2 $ten*17 #ffbb80,
+    $ten*3 $ten*17 #ffbb80,
+    $ten*4 $ten*17 #c66b49,
+    $ten*5 $ten*17 $bl,
+    $ten*6 $ten*17 $bl,
+    /* line 19 */
+    $minten*12 $ten*18 $bl,
+    $minten*11 $ten*18 $bl,
+    $minten*10 $ten*18 $bl,
+    $minten*9 $ten*18 $bl,
+    $minten*8 $ten*18 $bl,
+    $minten*7 $ten*18 #ffbb80,
+    $minten*6 $ten*18 $bl,
+    $minten*5 $ten*18 #47261a,
+    $minten*4 $ten*18 $bl,
+    $minten*3 $ten*18 #bbb,
+    $minten*2 $ten*18 #bbb,
+    $minten $ten*18 $bl,
+    $zero $ten*18 $bl,
+    $ten*1 $ten*18 #ffbb80,
+    $ten*2 $ten*18 #ffbb80,
+    $ten*3 $ten*18 $bl,
+    $ten*4 $ten*18 $bl,
+    $ten*5 $ten*18 $bl,
+    $ten*6 $ten*18 $bl,
+    /* line 21 */
+    $minten*13 $ten*19 $bl,
+    $minten*12 $ten*19 $bl,
+    $minten*11 $ten*19 $bl,
+    $minten*10 $ten*19 $bl,
+    $minten*9 $ten*19 $bl,
+    $minten*8 $ten*19 $bl,
+    $minten*7 $ten*19 #c66b49,
+    $minten*6 $ten*19 $bl,
+    $minten*5 $ten*19 #47261a,
+    $minten*4 $ten*19 #c66b49,
+    $minten*3 $ten*19 #bbb,
+    $minten*2 $ten*19 #fff,
+    $minten $ten*19 #555555,
+    $zero $ten*19 #c66b49,
+    $ten*1 $ten*19 #ffbb80,
+    $ten*2 $ten*19 #ffbb80,
+    $ten*3 $ten*19 #c66b49,
+    $ten*4 $ten*19 $bl,
+    /* line 21 */
+    $minten*10 $ten*20 $bl,
+    $minten*9 $ten*20 $bl,
+    $minten*8 $ten*20 $bl,
+    $minten*7 $ten*20 $bl,
+    $minten*6 $ten*20 $bl,
+    $minten*5 $ten*20 #47261a,
+    $minten*4 $ten*20 #c66b49,
+    $minten*3 $ten*20 #c66b49,
+    $minten*2 $ten*20 #ffbb80,
+    $minten $ten*20 #ffbb80,
+    $zero $ten*20 #ffbb80,
+    $ten*1 $ten*20 #ffbb80,
+    $ten*2 $ten*20 #ffbb80,
+    $ten*3 $ten*20 #c66b49,
+    $ten*4 $ten*20 $bl,
+    /* line 22 */
+    $minten*11 $ten*21 $bl,
+    $minten*10 $ten*21 #bba578,
+    $minten*9 $ten*21 $bl,
+    $minten*8 $ten*21 $bl,
+    $minten*7 $ten*21 $bl,
+    $minten*6 $ten*21 $bl,
+    $minten*5 $ten*21 $bl,
+    $minten*4 $ten*21 #47261a,
+    $minten*3 $ten*21 #c66b49,
+    $minten*2 $ten*21 #ffbb80,
+    $minten $ten*21 #ffbb80,
+    $zero $ten*21 #ffbb80,
+    $ten*1 $ten*21 #ffbb80,
+    $ten*2 $ten*21 #c66b49,
+    $ten*3 $ten*21 $bl,
+    /* line 23 */
+    $minten*4 $ten*22 $bl,
+    $minten*3 $ten*22 $bl,
+    $minten*2 $ten*22 #c66b49,
+    $minten $ten*22 #ffbb80,
+    $zero $ten*22 #ffbb80,
+    $ten*1 $ten*22 #c66b49,
+    $ten*2 $ten*22 $bl,
+    $ten*3 $ten*22 $bl,
+    /* line 24 */
+    $minten*3 $ten*23 $bl,
+    $minten*2 $ten*23 $bl,
+    $minten $ten*23 $bl,
+    $zero $ten*23 $bl,
+    $ten*1 $ten*23 $bl,
+    $ten*2 $ten*23 $bl
+  ;
+
+}

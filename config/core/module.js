@@ -26,6 +26,8 @@ export default {
         {
           loader : 'url-loader',
           options: {
+            name: '[path][name].[ext]',
+            context: PATHS.app,
             limit: 10000
           }
         }

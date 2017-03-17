@@ -1,3 +1,15 @@
+@import 'chars/goku';
+
+$images: '../img';
+
+* {
+  &,
+  &:after,
+  &:before {
+    box-sizing: border-box;
+  }
+}
+
 body, html, #app {
   width: 100%;
   height: 100%;
@@ -48,12 +60,17 @@ header {
   }
 }
 
+#goku {
+  margin-left: 5em;
+}
+
 #game-scene--intro {
-  background-color: #192856;
+  background-color: #0e2e77;
+  color: #efca00;
 }
 
 #game-level--space {
-  background-color: #561942;
+  background: #71db00 url('#{$images}/landscape.png') repeat-x;
 }
 
 #game-scene--score {

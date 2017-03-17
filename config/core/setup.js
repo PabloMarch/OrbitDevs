@@ -1,9 +1,13 @@
-import path from 'path';
+const appPath = 'app';
+const buildPath = 'docs';
+const uiPath = 'assets';
+const localServer = 'http://localhost:8080';
 
 export const PATHS = {
-  app: path.join( process.cwd(), 'app' ),
-  build: path.join( process.cwd(), 'docs' ),
-  resolvePaths: [ 'node_modules', 'app', 'components' ]
+  app: `${process.cwd()}/${appPath}`,
+  build: `${process.cwd()}/${buildPath}`,
+  publicPath: `${localServer}/`,
+  resolvePaths: [ appPath, 'node_modules', 'components' ]
 };
 
 export const PRESET = [

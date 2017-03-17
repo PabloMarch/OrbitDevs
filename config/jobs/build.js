@@ -11,7 +11,6 @@ export default {
         exclude: /node_modules/,
         include: PATHS.app,
         use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
           use: [
             { loader: 'css-loader' },
             { loader: 'sass-loader' }

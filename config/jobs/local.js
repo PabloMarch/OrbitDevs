@@ -1,5 +1,4 @@
 import { DefinePlugin, HotModuleReplacementPlugin } from 'webpack';
-
 import { PATHS } from '../core/setup';
 
 export default {
@@ -8,16 +7,15 @@ export default {
     rules: [
       {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           { loader: 'style-loader' },
           {
             loader: 'css-loader',
             options: {
               // modules: true,
-              importLoaders: 1,
-              sourceMap: true,
               // localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
-              includePaths: [ './app', './app/components' ]
+              // importLoaders: 1
             }
           },
           {

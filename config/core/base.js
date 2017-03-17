@@ -1,9 +1,8 @@
-import path from 'path';
 import { PATHS } from './setup';
 
 export default {
   entry: {
-    app: [ path.join(PATHS.app, 'index.js') ],
+    app: [ `${PATHS.app}/index.js` ],
     vendor: ['react']
   },
   output: {

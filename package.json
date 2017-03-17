@@ -4,7 +4,7 @@
   "description": "OrbitDevs Game / React / Redux / Games libraries / Test",
   "main": "index.ejs",
   "scripts": {
-    "build": "rimraf build && webpack",
+    "build": "rimraf docs && webpack",
     "start": "webpack-dev-server",
     "test": "test"
   },
