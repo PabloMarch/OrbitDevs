@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-// user interactions
-import Intro from 'stops/Intro';
-import Score from 'stops/Score';
+// game screens
+import Intro from './intro';
+import Score from './score';
+
 // scenarios
-import Space from 'scenes/Space';
+import Space from 'scenes/space';
 
-export default class Game1 extends Component {
+// actions
+import {
+  sayHello
+} from './actions';
+
+class Orbital extends Component {
 
   constructor(props) {
     super(props);
 
-    // TODO: Ganeral Game SetUp: Move to GameSetUp Component
+    // TODO: Move later to a reducer
     const gameSetup = {
       // score
       score: 0,
@@ -32,14 +39,12 @@ export default class Game1 extends Component {
     this.state = Object.assign({}, gameSetup);
   }
 
-  /*
-   * GAME: Specific game:
-   */
-
-  // code here
+  componentWillMount () {
+    this.props.dispatch(sayHello('READY??'));
+  }
 
   /*
-   * TODO: Ganeral Game SetUp: Move to GameSetUp Component
+   * GAME Bootstrap
    */
 
   onNextScore = (i = 0) => {
@@ -101,22 +106,33 @@ export default class Game1 extends Component {
     console.log('Game::onResetGame: ', this.state);
   }
 
+  /*
+   * GAME Interactions
+   */
+
+  // Code here
+
   render() {
     const { score, scoreMax, level, gameStep } = this.state;
 
     this.gameStates = [
-      <Intro onNextGameStep={this.onNextGameStep} />,
-      <Space
-        status={{ score, scoreMax, level, gameStep }}
-        handlers={{
-          onNextLevel: this.onNextLevel,
-          onNextGameStep: this.onNextGameStep,
-          onNextScore: this.onNextScore
-        }}
+      <Intro
+        onNextGameStep={this.onNextGameStep}
+        introText={this.props.orbital.text}
       />,
+      <Space />,
       <Score score={score} onResetGame={this.onResetGame} />
     ];
 
     return this.gameStates[gameStep-1];
   }
 }
+
+// Sample scene redux
+function mapStateToProps(state) {
+  return {
+    orbital: state.orbital
+  };
+}
+
+export default connect(mapStateToProps)(Orbital);

@@ -6,7 +6,7 @@ const initialState = {
   text: 'Hello Reducer!!'
 }
 
-export const intro = (state = initialState, action) => {
+export const orbital = (state = initialState, action) => {
 
     switch (action.type) {
       case SAY_HELLO:

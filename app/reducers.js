@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { intro } from 'stops/Intro/reducer';
+import { orbital } from 'games/orbital/reducer';
 
 const rootReducer = combineReducers({
-  intro
+  orbital
 });
 
 export default rootReducer;

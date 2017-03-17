@@ -2,17 +2,21 @@ import './index.scss';
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Loop, Stage, World, Body } from 'react-game-kit';
+import { Loop, Stage } from 'react-game-kit';
 // config
 import configureStore from './store/configureStore';
 // components
-import Game1 from './games/Game1';
+import Orbital from './games/orbital';
 
 const store = configureStore();
 
 render(
   <Provider store={store}>
-    <Game1 />
+    <Loop className="rgk-loop">
+      {/* <Stage style={{ background: '#3a9bdc' }}> */}
+        <Orbital />
+      {/* </Stage> */}
+    </Loop>
   </Provider>,
   document.getElementById('app')
 );
