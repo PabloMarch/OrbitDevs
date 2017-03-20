@@ -13,9 +13,13 @@ const store = configureStore();
 render(
   <Provider store={store}>
     <Loop className="rgk-loop">
-      {/* <Stage style={{ background: '#3a9bdc' }}> */}
+      <Stage
+        width={700}
+        height={700}
+        style={{ background: '#3a9bdc' }}
+      >
         <Orbital />
-      {/* </Stage> */}
+      </Stage>
     </Loop>
   </Provider>,
   document.getElementById('app')

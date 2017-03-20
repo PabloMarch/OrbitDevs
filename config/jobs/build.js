@@ -1,4 +1,5 @@
 import { DefinePlugin, LoaderOptionsPlugin, optimize } from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import { PATHS } from '../core/setup';
@@ -44,6 +45,7 @@ export default {
         comments: false,
       }
     }),
-    new ExtractTextPlugin('app.bundle.css')
+    new ExtractTextPlugin('app.bundle.css'),
+    new BundleAnalyzerPlugin()
   ]
 };

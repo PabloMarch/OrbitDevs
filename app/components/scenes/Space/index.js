@@ -27,34 +27,32 @@ export default class Space extends Component {
     this.keyListener.unsubscribe();
   }
 
-  physicsInit = (engine) => {
+  createWorld = (engine) => {
     const ground = Matter.Bodies.rectangle(
-      512 * 3, 560,
-      1024 * 3, 64,
+      0, 650,
+      1600, 5,
       { isStatic: true }
     );
 
     const leftWall = Matter.Bodies.rectangle(
-      -64, 288,
-      64, 576,
+      -75, 0,
+      75, 700,
       { isStatic: true },
     );
 
     const rightWall = Matter.Bodies.rectangle(
-      3008, 288,
-      64, 576,
+      600, 0,
+      75, 700,
       { isStatic: true },
     );
 
-    Matter.World.addBody(engine.world, ground);
-    // Matter.World.addBody(engine.world, leftWall);
-    // Matter.World.addBody(engine.world, rightWall);
+    Matter.World.add(engine.world, [ ground, leftWall, rightWall ]);
   }
 
   render() {
     return(
       <section id="game-level--space">
-        <World onInit={this.physicsInit}>
+        <World onInit={this.createWorld}>
           <Astronaut keys={this.keyListener} />
         </World>
       </section>

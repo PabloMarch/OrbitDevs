@@ -5,6 +5,9 @@
 **Requirements:**
 [Node, React, Redux, WebPack, Ava]
 
+## Notes
+This game is been created based on a game-kit created by [FormidableLabs ](https://github.com/FormidableLabs/react-game-kit)
+
 ## Developer Setup
 
 ### Installation

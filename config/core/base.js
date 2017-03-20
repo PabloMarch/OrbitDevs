@@ -3,7 +3,7 @@ import { PATHS } from './setup';
 export default {
   entry: {
     app: [ `${PATHS.app}/index.js` ],
-    vendor: ['react']
+    vendor: ['react', 'react-dom', 'react-redux', 'redux', 'redux-thunk', 'mojs', 'matter-js']
   },
   output: {
     path: PATHS.build,

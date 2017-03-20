@@ -1,3 +1,16 @@
+// Astronaut
+.char-box {
+  width: 75;
+  height: 120;
+  background-color: '#fff';
+
+  &.char-action-move--left {
+    transform: scaleX(-1);
+  }
+}
+
+// Goku Sample:
+
 $sd: #40b733;
 $bl: #000;
 $blu: #0080ff;
@@ -11,10 +24,6 @@ $dorn: #aa5500;
 $zero: 0px;
 $ten: 10px;
 $minten: -10px;
-
-body{
-  background:#2a8e5c;
-}
 
 @-webkit-keyframes head{
   0%{
@@ -89,12 +98,11 @@ body{
 }
 
 #goku{
-  margin-top:30px;
   background:#fff;
   position:relative;
-    -ms-transform: scale(0.3); /* IE 9 */
-    -webkit-transform: scale(0.3); /* Chrome, Safari, Opera */
-    transform: scale(0.3);
+    -ms-transform: scale(0.25); /* IE 9 */
+    -webkit-transform: scale(0.25); /* Chrome, Safari, Opera */
+    transform: scale(0.25);
 }
 
 .shadow{

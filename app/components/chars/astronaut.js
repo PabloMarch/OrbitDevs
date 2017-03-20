@@ -1,3 +1,4 @@
+import './astronaut.scss';
 import React, { Component, PropTypes } from 'react';
 import Matter from 'matter-js';
 import { Body } from 'react-game-kit';
@@ -6,11 +7,9 @@ export default class Astronaut extends Component {
   constructor(props) {
     super(props);
 
-    this.isJumping = false;
-    this.isFlying = false;
-
     this.state = {
       stageX: 0,
+      task: 'stay',
       position: {}
     }
   }
@@ -23,14 +22,14 @@ export default class Astronaut extends Component {
     Matter.Events.off(this.context.engine, 'afterUpdate', this.update);
   }
 
-  move = (body, x, y) => {
-    console.log('Astronaut::WALKING ', body.position);
+  move = (body, direction, distance) => {
+    const { x = 0, y = 0 } = distance;
+    this.setState({ task: `move--${direction}` });
     Matter.Body.setVelocity(body, { x, y });
   }
 
   fly = (body) => {
-    this.isFlying = true;
-    console.log('Astronaut::FLYING ', body);
+    this.setState({ task: 'fly' });
     Matter.Body.applyForce(
       body,
       { x: 0, y: 0 },
@@ -40,7 +39,7 @@ export default class Astronaut extends Component {
   };
 
   jump = (body) => {
-    this.isJumping = true;
+    this.setState({ task: 'jump' });
     Matter.Body.applyForce(
       body,
       { x: 0, y: 0 },
@@ -54,28 +53,23 @@ export default class Astronaut extends Component {
     const { body } = this.body;
 
     if (keys.isDown(keys.LEFT)) {
-      console.log('Astronaut::checkKeys: LEFT ');
-      this.move(body, -5, 0);
+      this.move(body, 'left', { x: -5 });
     }
 
-    if (keys.isDown(keys.RIGHT)) {
-      console.log('Astronaut::checkKeys: RIGHT ');
-      this.move(body, 5, 0);
+    else if (keys.isDown(keys.RIGHT)) {
+      this.move(body, 'right', { x: 5 });
     }
 
-    if (keys.isDown(keys.DOWN)) {
-      console.log('Astronaut::checkKeys: DOWN ');
-      this.move(body, 0, 5);
+    else if (keys.isDown(keys.DOWN)) {
+      this.move(body, 'down', { y: 1 });
     }
 
-    if (keys.isDown(keys.UP)) {
-      console.log('Astronaut::checkKeys: UP ');
-      this.fly(body);
+    else if (keys.isDown(keys.UP)) {
+      this.fly(body, 'up');
     }
 
     if (keys.isDown(keys.SPACE)) {
-      console.log('Astronaut::checkKeys: SPACE ');
-      if (!this.isJumping) {
+      if (this.state.task !== 'jump') {
         this.jump(body, 0, -30);
       }
     }
@@ -83,13 +77,12 @@ export default class Astronaut extends Component {
 
   update = () => {
     const { body } = this.body;
-
-    // console.log('Astronaut::update', body.position);
-
     const velY = parseFloat(body.velocity.y.toFixed(10));
 
-    if (velY === 0) {
-      this.isJumping = false;
+    console.log('Astronaut::task: ', this.state.task, this.state.position);
+
+    if (velY === 0 && this.state.task === 'jump') {
+      this.setState({ task: 'stay' });
       Matter.Body.set(body, 'friction', 0.9999);
     }
 
@@ -116,11 +109,11 @@ export default class Astronaut extends Component {
     return(
       <div style={this.getWrapperStyles()}>
         <Body
-          args={[x, y, 50, 75]}
           inertia={Infinity}
-          ref={(b) => { this.body = b; }}
+          args={[x, y, 50, 75]}
+          ref={(r) => { this.body = r; }}
         >
-          <div style={{ width: 50, height: 75 }}>
+          <div className={`char-box char-action-${this.state.task}`} >
             <div id="goku">
           		<div className="head"></div>
           		<div className="body"></div>
